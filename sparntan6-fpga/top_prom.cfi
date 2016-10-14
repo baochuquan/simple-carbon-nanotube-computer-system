@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.49d
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.49d
+DATE            10/11/2016 - 13:41
+SOURCE          C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\top_prom.mcs
+DEVICE          XCF16P
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x1ABDC523
+BLOCK 0 VERSION 0 END 0x0ACDC523

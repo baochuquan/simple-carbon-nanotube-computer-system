@@ -1,0 +1,133 @@
+Please input the name of a target binary file: Please input the name of a data file: 
+parse ELF, getting INSTRUCTIONS ....
+Instruction num: 8
+======================
+PC:0       Inst: 0000
+PC:1       Inst: 100
+PC:2       Inst: 901
+PC:3       Inst: 80a
+PC:4       Inst: d02
+PC:5       Inst: 1003
+PC:6       Inst: 1103
+PC:7       Inst: 1504
+PC:8       Inst: 3fff
+======================
+
+parse Data, getting ADDRESS & DATA ....
+Data
+======================
+Address: 0    Data: 1
+Address: 1    Data: 2
+Address: 2    Data: 3
+Address: 3    Data: 4
+Address: 4    Data: 5
+Address: 5    Data: 6
+Address: 6    Data: 7
+Address: 7    Data: 8
+======================
+instNum length: 9
+dataNum length: 8
+======================
+======================
+Set CACK = input.
+Set CACK callback function.
+Set EN to launch carbon core.
+Set RESET = 0 to launch clock generator.
+Set IICING = 1 to allow iic communicate.
+Set ISCL & DSCL output.
+======================
+Writing Data.
+DATA Write:   0x0 => 0x1
+DATA Read :   0x0 => 0x1
+-----------
+DATA Write:   0x1 => 0x2
+DATA Read :   0x1 => 0x2
+-----------
+DATA Write:   0x2 => 0x3
+DATA Read :   0x2 => 0xd
+DATA Write:   0x2 => 0x3
+DATA Read :   0x2 => 0xd
+DATA Write:   0x2 => 0x3
+DATA Read :   0x2 => 0xd
+DATA Write:   0x2 => 0x3
+DATA Read :   0x2 => 0x3
+-----------
+DATA Write:   0x3 => 0x4
+DATA Read :   0x3 => 0x4
+-----------
+DATA Write:   0x4 => 0x5
+DATA Read :   0x4 => 0x5
+-----------
+DATA Write:   0x5 => 0x6
+DATA Read :   0x5 => 0x6
+-----------
+DATA Write:   0x6 => 0x7
+DATA Read :   0x6 => 0x7
+-----------
+DATA Write:   0x7 => 0x8
+DATA Read :   0x7 => 0x8
+-----------
+======================
+Writing Instructions.
+INST Write:   0x0 => 0x0
+INST Read :   0x0 => 0x0
+-----------
+INST Write:   0x1 => 0x100
+INST Read :   0x1 => 0x100
+-----------
+INST Write:   0x2 => 0x901
+INST Read :   0x2 => 0x901
+-----------
+INST Write:   0x3 => 0x80a
+INST Read :   0x3 => 0x80a
+-----------
+INST Write:   0x4 => 0xd02
+INST Read :   0x4 => 0xd02
+-----------
+INST Write:   0x5 => 0x1003
+INST Read :   0x5 => 0x1003
+-----------
+INST Write:   0x6 => 0x1103
+INST Read :   0x6 => 0x1103
+-----------
+INST Write:   0x7 => 0x1504
+INST Read :   0x7 => 0x1504
+-----------
+INST Write:   0x8 => 0x3fff
+INST Read :   0x8 => 0x3fff
+-----------
+======================
+Set IICING = 0 to close iic communication.
+Set EN = 1 to launch carbon core.
+++++++++++++++++++++++
+Receive CACK signal!!!
+++++++++++++++++++++++
+Set En = 0 to disable Carbon core.
+Set RESET = 1 to disable clock generator.
+Set IICING = 1 to get the result.
+======================
+Get Result from DRAM.
+======================
+DATA Read :   0x0 => 0x1
+DATA Read :   0x1 => 0x2
+DATA Read :   0x2 => 0xd
+DATA Read :   0x3 => 0x4
+DATA Read :   0x4 => 0x6
+DATA Read :   0x5 => 0x6
+DATA Read :   0x6 => 0x7
+DATA Read :   0x7 => 0x8
+DATA Read :   0x8 => 0x6
+DATA Read :   0x9 => 0x4e
+======================
+Get Result from IRAM.
+======================
+INST Read :   0x0 => 0x0
+INST Read :   0x1 => 0x100
+INST Read :   0x2 => 0x901
+INST Read :   0x3 => 0x80a
+INST Read :   0x4 => 0xd02
+INST Read :   0x5 => 0x1003
+INST Read :   0x6 => 0x1103
+INST Read :   0x7 => 0x1504
+INST Read :   0x8 => 0x3fff
+INST Read :   0x9 => 0x0

@@ -1,0 +1,444 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole
+T_opt
+Z1 V`[[>[Q3cg[JaKG7_4f4jW2
+Z2 04 11 4 work testbench01 fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-d8cb8a53db0c-57fb9b1c-3d6-5a80
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z6 n@_opt
+Z7 OL;O;10.0a;49
+Z8 dC:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole
+vACC
+Z9 Ioa5P?cS=GiVHYzF@>M60C2
+Z10 V:DaoGF5K^c<lij=XXVI4P2
+R8
+Z11 w1476024049
+Z12 8ACC.v
+Z13 FACC.v
+L0 21
+Z14 OL;L;10.0a;49
+r1
+31
+Z15 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z16 n@a@c@c
+Z17 !s100 =<4]XjBFfMLH<cKA3<UXi0
+Z18 !s108 1476067201.594000
+Z19 !s107 ACC.v|
+Z20 !s90 -reportprogress|300|ACC.v|
+!s85 0
+vALU
+Z21 IAQ0=ZK2AbH70jHDV[ICze3
+Z22 Vcm<fAJ?PIcFoS^bS@SF`73
+R8
+Z23 w1476024071
+Z24 8ALU.v
+Z25 FALU.v
+L0 36
+R14
+r1
+31
+R15
+Z26 n@a@l@u
+Z27 !s100 nDGHBfC@H2:fRdfKaL1_C0
+Z28 !s108 1476067201.563000
+Z29 !s107 signal.vh|ALU.v|
+Z30 !s90 -reportprogress|300|ALU.v|
+!s85 0
+vCarbonCore
+Z31 I33_BQCcZ5lK5niR3AG8ck0
+Z32 VgJc;0;36`N]J<Hl[]3@Jd3
+R8
+Z33 w1476024765
+Z34 8CarbonCore.v
+Z35 FCarbonCore.v
+L0 1
+R14
+r1
+31
+R15
+Z36 n@carbon@core
+Z37 !s100 hZC:LGlidAZ:jj<GXXdi10
+Z38 !s108 1476067201.657000
+Z39 !s107 CarbonCore.v|
+Z40 !s90 -reportprogress|300|CarbonCore.v|
+!s85 0
+vClk_gen
+Z41 I3YnQ<Bn8WV<IR3GH8X[cl2
+Z42 V56YGi^@b3;h568aD3h[:[3
+R8
+Z43 w1476024236
+Z44 8Clk_gen.v
+Z45 FClk_gen.v
+L0 11
+R14
+r1
+31
+R15
+Z46 n@clk_gen
+Z47 !s100 PHA`GcX6kblAoGaZOV9SK3
+Z48 !s108 1476067201.533000
+Z49 !s107 Clk_gen.v|
+Z50 !s90 -reportprogress|300|Clk_gen.v|
+!s85 0
+vController
+Z51 IaZ]hUcKz0^?zEgU2370^X1
+Z52 VI`6PMg^H]hBE_3^WJg:_B1
+R8
+Z53 w1476024269
+Z54 8Controller.v
+Z55 FController.v
+L0 10
+R14
+r1
+31
+R15
+Z56 n@controller
+Z57 !s100 OnaC=Xz3bD=lKA4`gAofK1
+Z58 !s108 1476067201.501000
+Z59 !s107 Controller.v|
+Z60 !s90 -reportprogress|300|Controller.v|
+!s85 0
+vCoordinator
+Z61 IiYGXR?0UYTOMVWTzS@fPX2
+Z62 V8ECkB8;jk>P]h;zGQ=JEZ0
+R8
+Z63 w1476024759
+Z64 8Coordinator.v
+Z65 FCoordinator.v
+L0 21
+R14
+r1
+31
+R15
+Z66 n@coordinator
+Z67 !s100 h<`J2fg^WA_:@go^A3^803
+Z68 !s108 1476067201.626000
+Z69 !s107 Coordinator.v|
+Z70 !s90 -reportprogress|300|Coordinator.v|
+!s85 0
+vDEC
+Z71 ID2<4gWb^^l_^idl7M^T?T1
+Z72 VBTMzCVSLIeRbSo`c]nS;X3
+R8
+Z73 w1476024004
+Z74 8DEC.v
+Z75 FDEC.v
+L0 23
+R14
+r1
+31
+R15
+Z76 n@d@e@c
+Z77 !s100 lkLmecP`X4nQmY4`R?lFn1
+Z78 !s108 1476067201.469000
+Z79 !s107 signal.vh|DEC.v|
+Z80 !s90 -reportprogress|300|DEC.v|
+!s85 0
+vDecoder
+Z81 IG3T2E4Sd@SdCk?nLMY<eS2
+Z82 VC29?[I1j9dZP5kd6XOX?13
+R8
+Z83 w1476024287
+Z84 8Decoder.v
+Z85 FDecoder.v
+L0 20
+R14
+r1
+31
+R15
+Z86 n@decoder
+Z87 !s100 k17F[=P<D<FX7;=6aEVa^3
+Z88 !s108 1476067201.439000
+Z89 !s107 Decoder.v|
+Z90 !s90 -reportprogress|300|Decoder.v|
+!s85 0
+vDRAM
+Z91 IWD>knZ_?B4NX:YLIn;C?;2
+Z92 V0<Ni3bK^ULRn<24z]kH:>3
+R8
+Z93 w1476024356
+Z94 8DRAM.v
+Z95 FDRAM.v
+L0 21
+R14
+r1
+31
+R15
+Z96 n@d@r@a@m
+Z97 !s100 CA`2k6M1kozch>l9^1;^;1
+Z98 !s108 1476067201.407000
+Z99 !s107 DRAM.v|
+Z100 !s90 -reportprogress|300|DRAM.v|
+!s85 0
+vDRAM_Controller
+Z101 I;DSKXm2iS>Ao2F>IRzLMK1
+Z102 V?7iOc2JBIbcm4aS7C2aL10
+R8
+Z103 w1476024315
+Z104 8DRAM_Controller.v
+Z105 FDRAM_Controller.v
+L0 21
+R14
+r1
+31
+R15
+Z106 n@d@r@a@m_@controller
+Z107 !s100 D5kaD<>dSkf3oI69NFOTg3
+Z108 !s108 1476067201.378000
+Z109 !s107 DRAM_Controller.v|
+Z110 !s90 -reportprogress|300|DRAM_Controller.v|
+!s85 0
+vDramRegisterFile
+Z111 IeWn=H0a3RToSH57d`JoOU1
+Z112 Vb@=Tdc9IY5;M5o8iV3hSc2
+R8
+Z113 w1476024551
+Z114 8ipcore_dir/DramRegisterFile.v
+Z115 Fipcore_dir/DramRegisterFile.v
+L0 39
+R14
+r1
+31
+R15
+Z116 n@dram@register@file
+Z117 !s100 Y>L9TG@Wc:BzHI3OFc0EF2
+Z118 !s108 1476067201.128000
+Z119 !s107 ipcore_dir/DramRegisterFile.v|
+Z120 !s90 -reportprogress|300|ipcore_dir/DramRegisterFile.v|
+!s85 0
+vglbl
+Z121 IFO;UBj`VnzY[Ym4SWVVm;3
+Z122 VM[9mS]S:KA1i4VeCMX35[3
+R8
+Z123 w1354680638
+Z124 8C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v
+Z125 FC:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R14
+r1
+31
+R15
+Z126 !s100 V<`KW`8LXe32mQ2Gdj1MB2
+Z127 !s108 1476067201.841000
+Z128 !s107 C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v|
+Z129 !s90 -reportprogress|300|C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v|
+!s85 0
+vI2C_data_com
+Z130 IYZYT[P_zJ]IBXGiSaTWW[1
+Z131 VA4So1:OT2O73m]9B0mz;D2
+R8
+Z132 w1476066967
+Z133 8I2C_data_com.v
+Z134 FI2C_data_com.v
+L0 1
+R14
+r1
+31
+R15
+Z135 n@i2@c_data_com
+Z136 !s100 j^01B29b_`H_VaH2G:d9A2
+Z137 !s108 1476067201.754000
+Z138 !s107 I2C_data_com.v|
+Z139 !s90 -reportprogress|300|I2C_data_com.v|
+!s85 0
+vI2C_inst_com
+Z140 I2MX3R3O>6EAfWo1HIg9e41
+Z141 VMoa]m`EaC3n5Sg7D3;==;0
+R8
+Z142 w1476066937
+Z143 8I2C_inst_com.v
+Z144 FI2C_inst_com.v
+L0 1
+R14
+r1
+31
+R15
+Z145 n@i2@c_inst_com
+Z146 !s100 I:VmYm@[S?Sk5JYTShNm02
+Z147 !s108 1476067201.723000
+Z148 !s107 I2C_inst_com.v|
+Z149 !s90 -reportprogress|300|I2C_inst_com.v|
+!s85 0
+vI2C_signal
+Z150 ImP;DfQFiM0R7T2^zD6>6[3
+Z151 VX4S9EiocJIA]bWdXOJnhH0
+R8
+Z152 w1476024407
+Z153 8I2C_signal.v
+Z154 FI2C_signal.v
+L0 21
+R14
+r1
+31
+R15
+Z155 n@i2@c_signal
+Z156 !s100 Nek;_H=3Y>>B?IgOLdP:P3
+Z157 !s108 1476067201.189000
+Z158 !s107 I2C_signal.v|
+Z159 !s90 -reportprogress|300|I2C_signal.v|
+!s85 0
+vIO_Convert
+Z160 Il_Fg;>a0k8EOMKfB7bd[i2
+Z161 VgDRXBd>n=9e3TdfK`9R550
+R8
+Z162 w1476024433
+Z163 8IO_Convert.v
+Z164 FIO_Convert.v
+L0 21
+R14
+r1
+31
+R15
+Z165 n@i@o_@convert
+Z166 !s100 0mBChEhN=Gh>4;2`19cSD3
+Z167 !s108 1476067201.158000
+Z168 !s107 IO_Convert.v|
+Z169 !s90 -reportprogress|300|IO_Convert.v|
+!s85 0
+vIRAM
+Z170 I^Zz5CQ37ba^C_MO@AJFc`0
+Z171 V?19C6dn8=f<`XjQ^O1>ZG2
+R8
+Z172 w1476024372
+Z173 8IRAM.v
+Z174 FIRAM.v
+L0 23
+R14
+r1
+31
+R15
+Z175 n@i@r@a@m
+Z176 !s100 UZI53I5<3OFdHmoOlbV1:2
+Z177 !s108 1476067201.345000
+Z178 !s107 IRAM.v|
+Z179 !s90 -reportprogress|300|IRAM.v|
+!s85 0
+vIRAM_Controller
+Z180 I5n;AnE?bEgXjeZ7kk]C@[2
+Z181 VlZIRX8Nk3<TizT4iITE=P2
+R8
+Z182 w1476024336
+Z183 8IRAM_Controller.v
+Z184 FIRAM_Controller.v
+L0 21
+R14
+r1
+31
+R15
+Z185 n@i@r@a@m_@controller
+Z186 !s100 LWi2Jb9LRnYm5bS]]aDWb1
+Z187 !s108 1476067201.316000
+Z188 !s107 IRAM_Controller.v|
+Z189 !s90 -reportprogress|300|IRAM_Controller.v|
+!s85 0
+vIramRegisterFile
+Z190 IH]h:5A7dZVY>Yf=;=<?]e1
+Z191 VRUd6XL?UlVQUW<>:jBI>n3
+R8
+Z192 w1476024658
+Z193 8ipcore_dir/IramRegisterFile.v
+Z194 Fipcore_dir/IramRegisterFile.v
+L0 39
+R14
+r1
+31
+R15
+Z195 n@iram@register@file
+Z196 !s100 iFlA?J``LX;d5z]FOiCDe1
+Z197 !s108 1476067201.073000
+Z198 !s107 ipcore_dir/IramRegisterFile.v|
+Z199 !s90 -reportprogress|300|ipcore_dir/IramRegisterFile.v|
+!s85 0
+vLATCH
+Z200 Ia;[efLHJTGke@>j_:5XzM1
+Z201 VICUWo_:C9>GoNHVa1jke_3
+R8
+Z202 w1476023940
+Z203 8LATCH.v
+Z204 FLATCH.v
+L0 21
+R14
+r1
+31
+R15
+Z205 n@l@a@t@c@h
+Z206 !s100 =m]_[WAnK^cKKXaQ2b:Ym0
+Z207 !s108 1476067201.282000
+Z208 !s107 LATCH.v|
+Z209 !s90 -reportprogress|300|LATCH.v|
+!s85 0
+vPC
+Z210 Izc5R^@Qj?cE8KDeFXD4Na2
+Z211 V6JL0l6<_LFh886<z[=:oU3
+R8
+Z212 w1476024031
+8PC.v
+FPC.v
+L0 21
+R14
+r1
+31
+R15
+n@p@c
+Z213 !s100 ]fVfzO]4_CLJF<C?L1Gj=3
+Z214 !s108 1476067201.250000
+Z215 !s107 PC.v|
+Z216 !s90 -reportprogress|300|PC.v|
+!s85 0
+vPC_PLUS_1
+Z217 IhFTmf:HZIjLHombobM8Ja2
+Z218 VcWEG^g;g[?4RNTDMGIl5T1
+R8
+Z219 w1476023977
+Z220 8PC_PLUS_1.v
+Z221 FPC_PLUS_1.v
+L0 21
+R14
+r1
+31
+R15
+Z222 n@p@c_@p@l@u@s_1
+Z223 !s100 Nfc>L3dCV7C00]hgenCkk1
+Z224 !s108 1476067201.220000
+Z225 !s107 PC_PLUS_1.v|
+Z226 !s90 -reportprogress|300|PC_PLUS_1.v|
+!s85 0
+vtestbench01
+Z227 Ie]f5NFJ=JmlI6oC=HeP@c3
+Z228 VPPSOh0eN=z<3A4[SaJznC3
+R8
+Z229 w1476067255
+Z230 8testbench01.v
+Z231 Ftestbench01.v
+L0 25
+R14
+r1
+31
+Z232 !s90 -reportprogress|300|testbench01.v|
+R15
+Z233 !s107 testbench01.v|
+Z234 !s100 V50ldTo^>AEX3PcfR7RId3
+Z235 !s108 1476107036.496000
+!s85 0
+vTop
+Z236 IC`@31lGL[]BLNX];kJ;=J3
+Z237 VHUaIdijgThb]D9dKM8oD42
+R8
+Z238 w1476025243
+Z239 8Top.v
+Z240 FTop.v
+L0 21
+R14
+r1
+31
+R15
+n@top
+Z241 !s100 1fCK?[kjdc3cK:5Qib1_o3
+Z242 !s108 1476067201.687000
+Z243 !s107 Top.v|
+Z244 !s90 -reportprogress|300|Top.v|
+!s85 0

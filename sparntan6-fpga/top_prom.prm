@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.49d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole//top_prom -x xcf16p -ver 0 C:/Users/baochuquan/Desktop/SPARTAN-6/FPGA4/whole/top.bit 
+
+PROM C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\top_prom.prm map: Tue Oct 11 13:41:01 2016
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          2048K
+PROM start    0000:0000
+PROM end      001f:ffff
+PROM checksum 1abdc523
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:34a7     Oct 11 11:30:12 2016 C:/Users/baochuquan/Desktop/SPARTAN-6/FPGA4/whole/top.bit

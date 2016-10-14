@@ -1,0 +1,9 @@
+MOV [0]
+ADD [1]
+ADD 10
+ADDn [2]
+SUB 3
+SUB [3]
+SUBn [4]
+END
+

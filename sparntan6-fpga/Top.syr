@@ -1,0 +1,986 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-ftg256
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ipcore_dir\IramRegisterFile.v" into library work
+Parsing module <IramRegisterFile>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ipcore_dir\DramRegisterFile.v" into library work
+Parsing module <DramRegisterFile>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IO_Convert.v" into library work
+Parsing module <IO_Convert>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\I2C_signal.v" into library work
+Parsing module <I2C_signal>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\PC_PLUS_1.v" into library work
+Parsing module <PC_PLUS_1>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\PC.v" into library work
+Parsing module <PC>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\LATCH.v" into library work
+Parsing module <LATCH>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM_Controller.v" into library work
+Parsing module <IRAM_Controller>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" into library work
+Parsing module <IRAM>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM_Controller.v" into library work
+Parsing module <DRAM_Controller>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" into library work
+Parsing module <DRAM>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Decoder.v" into library work
+Parsing module <Decoder>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DEC.v" into library work
+Parsing verilog file "signal.vh" included at line 21.
+Parsing module <DEC>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Controller.v" into library work
+Parsing module <Controller>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" into library work
+Parsing module <Clk_gen>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ALU.v" into library work
+Parsing verilog file "signal.vh" included at line 34.
+Parsing module <ALU>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ACC.v" into library work
+Parsing module <ACC>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Coordinator.v" into library work
+Parsing module <Coordinator>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\CarbonCore.v" into library work
+Parsing module <CarbonCore>.
+Analyzing Verilog file "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Top.v" into library work
+Parsing module <Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top>.
+
+Elaborating module <CarbonCore>.
+
+Elaborating module <LATCH(width=1)>.
+
+Elaborating module <LATCH(width=8)>.
+
+Elaborating module <PC_PLUS_1>.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\PC_PLUS_1.v" Line 42: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <DEC>.
+
+Elaborating module <PC>.
+
+Elaborating module <ACC>.
+
+Elaborating module <ALU>.
+WARNING:HDLCompiler:1016 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Coordinator.v" Line 78: Port clkE is not connected to this instance
+
+Elaborating module <Coordinator>.
+
+Elaborating module <Clk_gen>.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 37: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 42: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 47: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 52: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 57: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 62: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 67: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 72: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v" Line 74: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <Controller>.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Controller.v" Line 17: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Controller.v" Line 18: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Controller.v" Line 19: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <Decoder>.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Decoder.v" Line 91: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Decoder.v" Line 96: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Decoder.v" Line 99: Assignment to DATA_SEG ignored, since the identifier is never used
+
+Elaborating module <DRAM_Controller>.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM_Controller.v" Line 43: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM_Controller.v" Line 49: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <IRAM_Controller>.
+WARNING:HDLCompiler:872 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM_Controller.v" Line 30: Using initial value of wea_val since it is never assigned
+
+Elaborating module <DRAM>.
+
+Elaborating module <I2C_signal>.
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" Line 49: Assignment to sck_low ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" Line 52: Assignment to sda_high ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" Line 53: Assignment to sda_low ignored, since the identifier is never used
+
+Elaborating module <IO_Convert>.
+
+Elaborating module <DramRegisterFile>.
+WARNING:HDLCompiler:1499 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ipcore_dir\DramRegisterFile.v" Line 39: Empty module <DramRegisterFile> remains a black box.
+
+Elaborating module <IRAM>.
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" Line 50: Assignment to sck_low ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" Line 53: Assignment to sda_high ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" Line 54: Assignment to sda_low ignored, since the identifier is never used
+
+Elaborating module <IramRegisterFile>.
+WARNING:HDLCompiler:1499 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ipcore_dir\IramRegisterFile.v" Line 39: Empty module <IramRegisterFile> remains a black box.
+WARNING:HDLCompiler:552 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Coordinator.v" Line 78: Input port clkE is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Top.v".
+    Summary:
+	no macro.
+Unit <Top> synthesized.
+
+Synthesizing Unit <CarbonCore>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\CarbonCore.v".
+    Summary:
+	no macro.
+Unit <CarbonCore> synthesized.
+
+Synthesizing Unit <LATCH_1>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\LATCH.v".
+        width = 1
+WARNING:Xst:737 - Found 1-bit latch for signal <res>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <LATCH_1> synthesized.
+
+Synthesizing Unit <LATCH_2>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\LATCH.v".
+        width = 8
+WARNING:Xst:737 - Found 1-bit latch for signal <res<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+	inferred   8 Multiplexer(s).
+Unit <LATCH_2> synthesized.
+
+Synthesizing Unit <PC_PLUS_1>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\PC_PLUS_1.v".
+    Found 8-bit adder for signal <pc[7]_GND_14_o_add_2_OUT> created at line 42.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <res<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <PC_PLUS_1> synthesized.
+
+Synthesizing Unit <DEC>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DEC.v".
+    Summary:
+	no macro.
+Unit <DEC> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\PC.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_pc<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+	inferred  16 Multiplexer(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <ACC>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ACC.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_acc<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+	inferred  16 Multiplexer(s).
+Unit <ACC> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\ALU.v".
+    Found 8-bit adder for signal <n0024> created at line 79.
+    Found 8-bit adder for signal <res> created at line 79.
+    Found 8-bit 3-to-1 multiplexer for signal <A> created at line 56.
+    Found 8-bit 5-to-1 multiplexer for signal <B> created at line 66.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <Coordinator>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Coordinator.v".
+WARNING:Xst:2898 - Port 'clkE', unconnected in block instance 'm_decoder', is tied to GND.
+    Summary:
+	no macro.
+Unit <Coordinator> synthesized.
+
+Synthesizing Unit <Clk_gen>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Clk_gen.v".
+    Found 1-bit register for signal <clkA>.
+    Found 1-bit register for signal <clkB>.
+    Found 1-bit register for signal <clkC>.
+    Found 1-bit register for signal <clkD>.
+    Found 6-bit register for signal <count>.
+    Found 6-bit adder for signal <count[5]_GND_44_o_add_1_OUT> created at line 37.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <Clk_gen> synthesized.
+
+Synthesizing Unit <Controller>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Controller.v".
+    Summary:
+	no macro.
+Unit <Controller> synthesized.
+
+Synthesizing Unit <Decoder>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\Decoder.v".
+WARNING:Xst:647 - Input <clkE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <pre_inst>.
+    Found 8-bit register for signal <pre_dram>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <Decoder> synthesized.
+
+Synthesizing Unit <DRAM_Controller>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM_Controller.v".
+WARNING:Xst:647 - Input <R> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <wea>.
+    Found 2-bit adder for signal <count[1]_GND_55_o_add_9_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <DRAM_Controller> synthesized.
+
+Synthesizing Unit <IRAM_Controller>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM_Controller.v".
+    Summary:
+	no macro.
+Unit <IRAM_Controller> synthesized.
+
+Synthesizing Unit <DRAM>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v".
+        S_idle = 3'b000
+        S_start = 3'b001
+        S_Index = 3'b010
+        S_Data = 3'b011
+        S_stop = 3'b100
+        HardWriteAddress = 8'b10100010
+        HardReadAddress = 8'b10100011
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" line 42: Output port <sck_low> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" line 42: Output port <sda_high> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\DRAM.v" line 42: Output port <sda_low> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <RAMAddress>.
+    Found 8-bit register for signal <RAMValueIn>.
+    Found 8-bit register for signal <ddataout>.
+    Found 1-bit register for signal <oe>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <MemWea>.
+    Found 1-bit register for signal <ReadOperation>.
+    Found 1-bit register for signal <WriteOperation>.
+    Found 1-bit register for signal <WROperation>.
+    Found 4-bit register for signal <cnt>.
+    Found 8-bit register for signal <sda_data>.
+    Found 1-bit register for signal <sda_dout>.
+    Found 8-bit register for signal <WriteRegisterValue>.
+    Found 8-bit register for signal <OpreatRegisterAddress>.
+    Found 1-bit register for signal <WriteEna>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 49                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 3                                              |
+    | Clock              | gclk (rising_edge)                             |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <cnt[3]_GND_57_o_add_66_OUT> created at line 211.
+    Found 1-bit 8-to-1 multiplexer for signal <_n0266> created at line 190.
+    Found 4-bit comparator greater for signal <cnt[3]_PWR_16_o_LessThan_53_o> created at line 189
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <DRAM> synthesized.
+
+Synthesizing Unit <I2C_signal>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\I2C_signal.v".
+    Found 8-bit register for signal <sda_window>.
+    Found 1-bit register for signal <sck_fall>.
+    Found 1-bit register for signal <sck_rise>.
+    Found 1-bit register for signal <sck_high>.
+    Found 1-bit register for signal <sck_low>.
+    Found 1-bit register for signal <sda_fall>.
+    Found 1-bit register for signal <sda_rise>.
+    Found 1-bit register for signal <sda_high>.
+    Found 1-bit register for signal <sda_low>.
+    Found 8-bit register for signal <sck_window>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <I2C_signal> synthesized.
+
+Synthesizing Unit <IO_Convert>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IO_Convert.v".
+    Found 1-bit tristate buffer for signal <din_dout> created at line 28
+    Summary:
+	inferred   1 Tristate(s).
+Unit <IO_Convert> synthesized.
+
+Synthesizing Unit <IRAM>.
+    Related source file is "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v".
+        S_idle = 3'b000
+        S_start = 3'b001
+        S_Index = 3'b010
+        S_Data = 3'b011
+        S_stop = 3'b100
+        HardWriteAddress = 8'b10100000
+        HardReadAddress = 8'b10100001
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" line 43: Output port <sck_low> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" line 43: Output port <sda_high> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\baochuquan\Desktop\SPARTAN-6\FPGA4\whole\IRAM.v" line 43: Output port <sda_low> of the instance <I2C_signal> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <RAMAddress>.
+    Found 16-bit register for signal <RAMValueIn>.
+    Found 16-bit register for signal <idataout>.
+    Found 1-bit register for signal <oe>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <MemWea>.
+    Found 1-bit register for signal <ReadOperation>.
+    Found 1-bit register for signal <WriteOperation>.
+    Found 1-bit register for signal <WROperation>.
+    Found 5-bit register for signal <cnt>.
+    Found 16-bit register for signal <sda_data>.
+    Found 1-bit register for signal <sda_dout>.
+    Found 16-bit register for signal <WriteRegisterValue>.
+    Found 8-bit register for signal <OpreatRegisterAddress>.
+    Found 1-bit register for signal <WriteEna>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 49                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 3                                              |
+    | Clock              | gclk (rising_edge)                             |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <cnt[4]_GND_62_o_add_74_OUT> created at line 220.
+    Found 1-bit 16-to-1 multiplexer for signal <_n0304> created at line 191.
+    Found 5-bit comparator greater for signal <cnt[4]_GND_62_o_LessThan_33_o> created at line 156
+    Found 5-bit comparator greater for signal <cnt[4]_PWR_20_o_LessThan_53_o> created at line 190
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  92 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <IRAM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 57
+ 1-bit register                                        : 35
+ 16-bit register                                       : 5
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 13
+# Latches                                              : 34
+ 1-bit latch                                           : 34
+# Comparators                                          : 3
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 2
+# Multiplexers                                         : 118
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 83
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 12
+ 5-bit 2-to-1 multiplexer                              : 12
+ 8-bit 2-to-1 multiplexer                              : 6
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 5-to-1 multiplexer                              : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/IramRegisterFile.ngc>.
+Reading core <ipcore_dir/DramRegisterFile.ngc>.
+Loading core <IramRegisterFile> for timing and area information for instance <IramMap>.
+Loading core <DramRegisterFile> for timing and area information for instance <DramMap>.
+
+Synthesizing (advanced) Unit <Clk_gen>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Clk_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DRAM_Controller>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <DRAM_Controller> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit adder carry in                                  : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 228
+ Flip-Flops                                            : 228
+# Comparators                                          : 3
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 2
+# Multiplexers                                         : 115
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 81
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 12
+ 5-bit 2-to-1 multiplexer                              : 12
+ 8-bit 2-to-1 multiplexer                              : 6
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 5-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <I2C_signal/sda_low> of sequential type is unconnected in block <IRAM>.
+WARNING:Xst:2677 - Node <I2C_signal/sda_high> of sequential type is unconnected in block <IRAM>.
+WARNING:Xst:2677 - Node <I2C_signal/sck_low> of sequential type is unconnected in block <IRAM>.
+WARNING:Xst:2677 - Node <I2C_signal/sda_low> of sequential type is unconnected in block <DRAM>.
+WARNING:Xst:2677 - Node <I2C_signal/sda_high> of sequential type is unconnected in block <DRAM>.
+WARNING:Xst:2677 - Node <I2C_signal/sck_low> of sequential type is unconnected in block <DRAM>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <coordinator/m_iram/FSM_1> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 010   | 010
+ 100   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <coordinator/m_dram/FSM_0> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 010   | 010
+ 100   | 110
+-------------------
+
+Optimizing unit <Top> ...
+
+Optimizing unit <Decoder> ...
+WARNING:Xst:2677 - Node <pre_inst_11> of sequential type is unconnected in block <Decoder>.
+WARNING:Xst:2677 - Node <pre_inst_12> of sequential type is unconnected in block <Decoder>.
+
+Optimizing unit <Clk_gen> ...
+
+Optimizing unit <CarbonCore> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <LATCH_2> ...
+
+Optimizing unit <PC_PLUS_1> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <ACC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 234
+ Flip-Flops                                            : 234
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 316
+#      GND                         : 3
+#      INV                         : 6
+#      LUT2                        : 27
+#      LUT3                        : 54
+#      LUT4                        : 33
+#      LUT5                        : 47
+#      LUT6                        : 122
+#      MUXCY                       : 7
+#      MUXF7                       : 6
+#      MUXF8                       : 1
+#      VCC                         : 2
+#      XORCY                       : 8
+# FlipFlops/Latches                : 268
+#      FD                          : 83
+#      FDE                         : 117
+#      FDR                         : 34
+#      LD                          : 34
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 5
+#      IOBUF                       : 2
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             268  out of  11440     2%  
+ Number of Slice LUTs:                  289  out of   5720     5%  
+    Number used as Logic:               289  out of   5720     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    418
+   Number with an unused Flip Flop:     150  out of    418    35%  
+   Number with an unused LUT:           129  out of    418    30%  
+   Number of fully used LUT-FF pairs:   139  out of    418    33%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    186     4%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)              | Load  |
+-----------------------------------+------------------------------------+-------+
+GCLK                               | BUFGP                              | 214   |
+coordinator/m_clk_gen/clkD         | BUFG                               | 22    |
+coordinator/m_clk_gen/clkA         | NONE(carboncore/acc_update_reg/res)| 18    |
+coordinator/m_clk_gen/clkB         | NONE(carboncore/pc/reg_pc_7)       | 16    |
+-----------------------------------+------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.587ns (Maximum Frequency: 151.814MHz)
+   Minimum input arrival time before clock: 4.967ns
+   Maximum output required time after clock: 6.560ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GCLK'
+  Clock period: 6.587ns (frequency: 151.814MHz)
+  Total number of paths / destination ports: 2889 / 349
+-------------------------------------------------------------------------
+Delay:               6.587ns (Levels of Logic = 5)
+  Source:            coordinator/m_iram/cnt_2 (FF)
+  Destination:       coordinator/m_iram/cnt_1 (FF)
+  Source Clock:      GCLK rising
+  Destination Clock: GCLK rising
+
+  Data Path: coordinator/m_iram/cnt_2 to coordinator/m_iram/cnt_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.525   1.553  coordinator/m_iram/cnt_2 (coordinator/m_iram/cnt_2)
+     LUT6:I0->O            6   0.254   0.876  coordinator/m_iram/ReadOperation_GND_62_o_AND_108_o11 (coordinator/m_iram/ReadOperation_GND_62_o_AND_108_o1)
+     LUT5:I4->O            3   0.254   0.766  coordinator/m_iram/Mmux__n05321111 (coordinator/m_iram/Mmux__n0532111)
+     LUT6:I5->O            1   0.254   0.682  coordinator/m_iram/_n0581_inv4_SW0 (N49)
+     LUT6:I5->O            5   0.254   0.841  coordinator/m_iram/_n0581_inv5 (coordinator/m_iram/_n0581_inv)
+     LUT4:I3->O            1   0.254   0.000  coordinator/m_iram/cnt_1_rstpot (coordinator/m_iram/cnt_1_rstpot)
+     FD:D                      0.074          coordinator/m_iram/cnt_1
+    ----------------------------------------
+    Total                      6.587ns (1.869ns logic, 4.718ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'coordinator/m_clk_gen/clkB'
+  Clock period: 1.816ns (frequency: 550.661MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               1.816ns (Levels of Logic = 1)
+  Source:            carboncore/acc/reg_acc_0 (LATCH)
+  Destination:       carboncore/acc/reg_acc_0 (LATCH)
+  Source Clock:      coordinator/m_clk_gen/clkB falling
+  Destination Clock: coordinator/m_clk_gen/clkB falling
+
+  Data Path: carboncore/acc/reg_acc_0 to carboncore/acc/reg_acc_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.581   0.949  carboncore/acc/reg_acc_0 (carboncore/acc/reg_acc_0)
+     LUT4:I2->O            1   0.250   0.000  carboncore/acc/Mmux_acc[7]_GND_33_o_mux_3_OUT<0>11 (carboncore/acc/acc[7]_GND_33_o_mux_3_OUT<0>)
+     LD:D                      0.036          carboncore/acc/reg_acc_0
+    ----------------------------------------
+    Total                      1.816ns (0.867ns logic, 0.949ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GCLK'
+  Total number of paths / destination ports: 82 / 82
+-------------------------------------------------------------------------
+Offset:              4.967ns (Levels of Logic = 2)
+  Source:            IICING (PAD)
+  Destination:       coordinator/m_iram/idataout_15 (FF)
+  Destination Clock: GCLK rising
+
+  Data Path: IICING to coordinator/m_iram/idataout_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            43   1.328   1.703  IICING_IBUF (IICING_IBUF)
+     INV:I->O             24   0.255   1.379  coordinator/m_dram/iicing_inv1_INV_0 (coordinator/m_dram/iicing_inv)
+     FDE:CE                    0.302          coordinator/m_dram/ddataout_0
+    ----------------------------------------
+    Total                      4.967ns (1.885ns logic, 3.082ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'coordinator/m_clk_gen/clkD'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.944ns (Levels of Logic = 2)
+  Source:            EN (PAD)
+  Destination:       coordinator/m_decoder/pre_inst_15 (FF)
+  Destination Clock: coordinator/m_clk_gen/clkD rising
+
+  Data Path: EN to coordinator/m_decoder/pre_inst_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.328   1.569  EN_IBUF (EN_IBUF)
+     INV:I->O             22   0.255   1.333  coordinator/m_decoder/END_inv1_INV_0 (coordinator/m_decoder/END_inv)
+     FDR:R                     0.459          coordinator/m_decoder/pre_dram_0
+    ----------------------------------------
+    Total                      4.944ns (2.042ns logic, 2.902ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'coordinator/m_clk_gen/clkA'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.643ns (Levels of Logic = 2)
+  Source:            EN (PAD)
+  Destination:       carboncore/pc_plus_1/res_7 (LATCH)
+  Destination Clock: coordinator/m_clk_gen/clkA falling
+
+  Data Path: EN to carboncore/pc_plus_1/res_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.328   2.025  EN_IBUF (EN_IBUF)
+     LUT6:I0->O            1   0.254   0.000  carboncore/pc_plus_1/pc[7]_GND_14_o_mux_3_OUT<6>1 (carboncore/pc_plus_1/pc[7]_GND_14_o_mux_3_OUT<6>)
+     LD:D                      0.036          carboncore/pc_plus_1/res_6
+    ----------------------------------------
+    Total                      3.643ns (1.618ns logic, 2.025ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'coordinator/m_clk_gen/clkB'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.464ns (Levels of Logic = 2)
+  Source:            EN (PAD)
+  Destination:       carboncore/pc/reg_pc_7 (LATCH)
+  Destination Clock: coordinator/m_clk_gen/clkB falling
+
+  Data Path: EN to carboncore/pc/reg_pc_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.328   1.846  EN_IBUF (EN_IBUF)
+     LUT4:I0->O            1   0.254   0.000  carboncore/pc/Mmux_pc_plus_1[7]_GND_24_o_mux_3_OUT<0>11 (carboncore/pc/pc_plus_1[7]_GND_24_o_mux_3_OUT<0>)
+     LD:D                      0.036          carboncore/pc/reg_pc_0
+    ----------------------------------------
+    Total                      3.464ns (1.618ns logic, 1.846ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GCLK'
+  Total number of paths / destination ports: 13 / 3
+-------------------------------------------------------------------------
+Offset:              6.560ns (Levels of Logic = 3)
+  Source:            coordinator/m_iram/idataout_9 (FF)
+  Destination:       CACK (PAD)
+  Source Clock:      GCLK rising
+
+  Data Path: coordinator/m_iram/idataout_9 to CACK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.525   1.252  coordinator/m_iram/idataout_9 (coordinator/m_iram/idataout_9)
+     LUT4:I0->O            1   0.254   0.682  coordinator/m_decoder/clkC_INST[15]_AND_33_o_SW0 (N37)
+     LUT6:I5->O            1   0.254   0.681  coordinator/m_decoder/clkC_INST[15]_AND_33_o (coordinator/CMDEND)
+     OBUF:I->O                 2.912          CACK_OBUF (CACK)
+    ----------------------------------------
+    Total                      6.560ns (3.945ns logic, 2.615ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock GCLK
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+GCLK                      |    6.587|         |         |         |
+coordinator/m_clk_gen/clkB|         |    1.989|         |         |
+coordinator/m_clk_gen/clkD|    4.058|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock coordinator/m_clk_gen/clkA
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+GCLK                      |         |         |    7.906|         |
+coordinator/m_clk_gen/clkB|         |         |    4.833|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock coordinator/m_clk_gen/clkB
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+coordinator/m_clk_gen/clkA|         |         |    2.024|         |
+coordinator/m_clk_gen/clkB|         |         |    1.816|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock coordinator/m_clk_gen/clkD
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+GCLK                      |    1.667|         |         |         |
+coordinator/m_clk_gen/clkA|         |    1.420|         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.59 secs
+ 
+--> 
+
+Total memory usage is 294708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   73 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

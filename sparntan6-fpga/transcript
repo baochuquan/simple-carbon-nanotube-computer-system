@@ -1,0 +1,327 @@
+# Reading C:/modeltech64_10.0a/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.0a Feb 17 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {testbench01.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module IramRegisterFile
+# 
+# Top level modules:
+# 	IramRegisterFile
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module DramRegisterFile
+# 
+# Top level modules:
+# 	DramRegisterFile
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module IO_Convert
+# 
+# Top level modules:
+# 	IO_Convert
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module I2C_signal
+# 
+# Top level modules:
+# 	I2C_signal
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module PC_PLUS_1
+# 
+# Top level modules:
+# 	PC_PLUS_1
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module LATCH
+# 
+# Top level modules:
+# 	LATCH
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module IRAM_Controller
+# 
+# Top level modules:
+# 	IRAM_Controller
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module IRAM
+# 
+# Top level modules:
+# 	IRAM
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module DRAM_Controller
+# 
+# Top level modules:
+# 	DRAM_Controller
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module DRAM
+# 
+# Top level modules:
+# 	DRAM
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module Decoder
+# 
+# Top level modules:
+# 	Decoder
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module DEC
+# 
+# Top level modules:
+# 	DEC
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module Clk_gen
+# 
+# Top level modules:
+# 	Clk_gen
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module ACC
+# 
+# Top level modules:
+# 	ACC
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module Coordinator
+# 
+# Top level modules:
+# 	Coordinator
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module CarbonCore
+# 
+# Top level modules:
+# 	CarbonCore
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module Top
+# 
+# Top level modules:
+# 	Top
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module I2C_inst_com
+# 
+# Top level modules:
+# 	I2C_inst_com
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module I2C_data_com
+# 
+# Top level modules:
+# 	I2C_data_com
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module testbench01
+# 
+# Top level modules:
+# 	testbench01
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.testbench01 glbl 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 13
+#           Attempting to use alternate WLF file "./wlftzhckm3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzhckm3
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "I2C_data_com".
+# ** Note: (vopt-143) Recognized 1 FSM in module "I2C_inst_com".
+# ** Note: (vopt-143) Recognized 1 FSM in module "DRAM".
+# ** Note: (vopt-143) Recognized 1 FSM in module "IRAM".
+# ** Warning: Coordinator.v(95): (vopt-2685) [TFMPC] - Too few port connections for 'm_decoder'.  Expected 17, found 16.
+# ** Warning: Coordinator.v(95): (vopt-2718) [TFMPC] - Missing connection for port 'clkE'.
+# Loading work.testbench01(fast)
+# Loading work.I2C_data_com(fast)
+# Loading work.I2C_inst_com(fast)
+# Loading work.Top(fast)
+# Loading work.CarbonCore(fast)
+# Loading work.LATCH(fast)
+# Loading work.LATCH(fast__1)
+# Loading work.PC_PLUS_1(fast)
+# Loading work.DEC(fast)
+# Loading work.PC(fast)
+# Loading work.ACC(fast)
+# Loading work.ALU(fast)
+# Loading work.Coordinator(fast)
+# Loading work.Clk_gen(fast)
+# Loading work.Controller(fast)
+# Loading work.Decoder(fast)
+# Loading work.DRAM_Controller(fast)
+# Loading work.IRAM_Controller(fast)
+# Loading work.DRAM(fast)
+# Loading work.I2C_signal(fast)
+# Loading work.IO_Convert(fast)
+# Loading work.DramRegisterFile(fast)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
+# Loading work.IRAM(fast)
+# Loading work.IramRegisterFile(fast)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast__1)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast__1)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast__1)
+# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast__1)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Block Memory Generator CORE Generator module testbench01.top.coordinator.m_dram.DramMap.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+# Block Memory Generator CORE Generator module testbench01.top.coordinator.m_iram.IramMap.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+# ----Inst Write Begin----
+# ++ i:          0 ++
+# ++ inst_addr:1 ++
+# ++ inst_data:100 ++
+run 70ms
+# **done**
+# ++ i:          1 ++
+# ++ inst_addr:2 ++
+# ++ inst_data:901 ++
+# **done**
+# ++ i:          2 ++
+# ++ inst_addr:3 ++
+# ++ inst_data:80a ++
+# **done**
+# ++ i:          3 ++
+# ++ inst_addr:4 ++
+# ++ inst_data:d02 ++
+# **done**
+# ++ i:          4 ++
+# ++ inst_addr:5 ++
+# ++ inst_data:1003 ++
+# **done**
+# ++ i:          5 ++
+# ++ inst_addr:6 ++
+# ++ inst_data:1103 ++
+# **done**
+# ++ i:          6 ++
+# ++ inst_addr:7 ++
+# ++ inst_data:1504 ++
+# **done**
+# ++ i:          7 ++
+# ++ inst_addr:8 ++
+# ++ inst_data:3fff ++
+# **done**
+# ----Inst Read  Begin----
+# ++ i:          0 ++
+# ++ inst_addr[i]:1 ++
+# ++ inst_RdData:100 ++
+# ++ i:          1 ++
+# ++ inst_addr[i]:2 ++
+# ++ inst_RdData:901 ++
+# ++ i:          2 ++
+# ++ inst_addr[i]:3 ++
+# ++ inst_RdData:80a ++
+# ++ i:          3 ++
+# ++ inst_addr[i]:4 ++
+# ++ inst_RdData:d02 ++
+# ++ i:          4 ++
+# ++ inst_addr[i]:5 ++
+# ++ inst_RdData:1003 ++
+# ++ i:          5 ++
+# ++ inst_addr[i]:6 ++
+# ++ inst_RdData:1103 ++
+# ++ i:          6 ++
+# ++ inst_addr[i]:7 ++
+# ++ inst_RdData:1504 ++
+# ++ i:          7 ++
+# ++ inst_addr[i]:8 ++
+# ++ inst_RdData:3fff ++
+# --------------------
+# ----Data Write Begin----
+# ++ i:          0 ++
+# ++ data_addr[i]:0 ++
+# ++ data_data:1 ++
+# **done**
+# ++ i:          1 ++
+# ++ data_addr[i]:1 ++
+# ++ data_data:2 ++
+# **done**
+# ++ i:          2 ++
+# ++ data_addr[i]:2 ++
+# ++ data_data:3 ++
+# **done**
+# ++ i:          3 ++
+# ++ data_addr[i]:3 ++
+# ++ data_data:4 ++
+# **done**
+# ++ i:          4 ++
+# ++ data_addr[i]:4 ++
+# ++ data_data:5 ++
+# **done**
+# ++ i:          5 ++
+# ++ data_addr[i]:5 ++
+# ++ data_data:6 ++
+# **done**
+# ++ i:          6 ++
+# ++ data_addr[i]:6 ++
+# ++ data_data:7 ++
+# **done**
+# ++ i:          7 ++
+# ++ data_addr[i]:7 ++
+# ++ data_data:8 ++
+# **done**
+# ----Data Read  Begin----
+# ++ i:          0 ++
+# ++ data_addr[i]:0 ++
+# ++ data_RdData:1 ++
+# ++ i:          1 ++
+# ++ data_addr[i]:1 ++
+# ++ data_RdData:2 ++
+# ++ i:          2 ++
+# ++ data_addr[i]:2 ++
+# ++ data_RdData:3 ++
+# ++ i:          3 ++
+# ++ data_addr[i]:3 ++
+# ++ data_RdData:4 ++
+# ++ i:          4 ++
+# ++ data_addr[i]:4 ++
+# ++ data_RdData:5 ++
+# ++ i:          5 ++
+# ++ data_addr[i]:5 ++
+# ++ data_RdData:6 ++
+# ++ i:          6 ++
+# ++ data_addr[i]:6 ++
+# ++ data_RdData:7 ++
+# ++ i:          7 ++
+# ++ data_addr[i]:7 ++
+# ++ data_RdData:8 ++
+# ----Data Read  Begin----
+# ++ i:          0 ++
+# ++ data_addr[i]:0 ++
+# ++ data_RdData:1 ++
+# ++ i:          1 ++
+# ++ data_addr[i]:1 ++
+# ++ data_RdData:2 ++
+# ++ i:          2 ++
+# ++ data_addr[i]:2 ++
+# ++ data_RdData:d ++
+# ++ i:          3 ++
+# ++ data_addr[i]:3 ++
+# ++ data_RdData:4 ++
+# ++ i:          4 ++
+# ++ data_addr[i]:4 ++
+# ++ data_RdData:6 ++
+# ++ i:          5 ++
+# ++ data_addr[i]:5 ++
+# ++ data_RdData:6 ++
+# ++ i:          6 ++
+# ++ data_addr[i]:6 ++
+# ++ data_RdData:7 ++
+# ++ i:          7 ++
+# ++ data_addr[i]:7 ++
+# ++ data_RdData:8 ++
+# ---- End ----

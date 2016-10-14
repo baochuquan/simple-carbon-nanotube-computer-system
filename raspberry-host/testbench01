@@ -1,0 +1,4 @@
+MOV 16
+ADD 26
+MOVn [0]
+END
