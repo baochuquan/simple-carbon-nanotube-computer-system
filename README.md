@@ -1,13 +1,17 @@
 # Carbon Core Computer System
 ---
-Author: Chuquan Bao
-Mail: baochuquan@163.com
-Site: chuquan.me
-Date  : 2016-10-14
+Author: Chuquan Bao  
+Mail: baochuquan@163.com  
+Site: chuquan.me  
+Date  : 2016-10-14  
 
 ## What is Carbon Core Computer System ?
 In 2013, the first carbon nanotube computer was born in Stanford which was composed of 178 CNTFETs(carbon nanotube field-effect-transistors). It was a one-instruction-set computer, implementing the SUBNEG(subtract and branch if negative). This CNTFET computer was a experimental works that it could only do 1 bit operations. It has neither monitor nor keyboard.   
 The target of this project is to implement a complete computer system that user can run some task programmed by them self, in which, the CPU is implemented with carbon nanotube.  
+
+#### Frame Work
+This computer system was composed of 3 parts: Carbon Core, Coordinator, Raspberry. As show in the figure below.  
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png)  
 
 ### Carbon Core(CPU)
 It is implemented with CNT actually, but it is implemented with FPGA in this repos.  
