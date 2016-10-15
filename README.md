@@ -88,7 +88,7 @@ Compiler here is implemented by a python program named **compiler.py**
 The linux compiler command like the follow command:   
 
 ```bash 
-python ./compiler.py *resourcefilename* *[targetfilename]*  
+python ./compiler.py resourcefilename [targetfilename]  
 ```
 
 For example, the **testbench03** is a assembly test program, let's compile it.  
