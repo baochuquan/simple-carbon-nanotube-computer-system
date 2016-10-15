@@ -85,13 +85,16 @@ After you loading the bit file to your FPGA and connecting the wires, you need t
 ## Compiler
 Compiler here is implemented by a python program named **compiler.py**  
 ### How to use Compiler.py
-The linux compiler command like the follow command: 
- 
-> python ./compiler.py *resourcefilename* *[targetfilename]*  
+The linux compiler command like the follow command:   
+
+```bash 
+python ./compiler.py *resourcefilename* *[targetfilename]*  
+```
 
 For example, the **testbench03** is a assembly test program, let's compile it.  
-
-> python ./compiler.py testbench03 test03
+```bash
+python ./compiler.py testbench03 test03
+```
 
 The command above will generate a target file named **a.out** by default. And the content of target file is consisted of binary data which present the compiled instructions. 
 
@@ -109,14 +112,16 @@ The file named **mainController.cpp** is the main file which include the entry f
 
 ### How to compile the project
 The bash file named **build.sh** is the build bash script. Follow the command below to build this project:  
-
-> ./build.sh  
+```bash
+./build.sh  
+```
 
 The command above will generate a exacutive file named **mainController**.  
 
 ### How to run this program
 Following the command below:  
-
-> sudo ./mainController > run.log
+```bash
+sudo ./mainController > run.log
+```
 
 Because of the GPIO initialization operation, you need a root privilege to run this program correctly. The run log information are written in **run.log**.
