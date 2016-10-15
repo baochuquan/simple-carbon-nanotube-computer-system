@@ -11,12 +11,12 @@ The target of this project is to implement a complete computer system that user 
 
 ### Frame Work
 This computer system was composed of 3 parts: Carbon Core, Coordinator, Raspberry. As shown in the figure below.  
-<div align=center><img src="http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png"/></div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png)
 
 ### Carbon Core(CPU)
 It is implemented with CNT actually, but it is implemented with FPGA in this repos.  
 The figure below shows the interface of Carbon Core.  
-<div align="center"><img src="http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore002.png"/></div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore002.png)
 
 Carbon Core is a very simple CPU, it has an accumulator--acc and an 8 bit adder as its ALU. We designed an 8 bit simple ISA for it, as shown in the table below:  
 
@@ -52,9 +52,9 @@ Carbon Core is a very simple CPU, it has an accumulator--acc and an 8 bit adder 
 
 ### Coordinator
 Carbon Core is a very simple CPU, to some extent you can consider it as an ALU with PC. So it need data RAM, instruction RAM, and a supplemental decoder. Therefore, Coordinator was created here. The figure below shows the interface of Coordinator crudely, the left interfaces connect with Carbon Core, while the right connect with Raspberry.  
-<div align="center"><img src="http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore003.png"/></div>  
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore003.png)
 Coordinator contains a 8 bit data RAM with 256 address space, and a 16 bit instruction RAM with 256 address space, both of these has its own RAM controller.  In addition, it has an supplemental decoder and a controller. What's more, it provide a clock generator that generates 4 clock with same frequency bu different phase, two of these are provided to Carbon Core, and the others are for decoder.  The figure below shown more detail about Coordinator.  
-<div align="center"><img src="http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore004.png"/></div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore004.png)
 
 
 ## How to use test this system ?
