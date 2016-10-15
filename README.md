@@ -48,29 +48,63 @@ Carbon Core is a very simple CPU, it has an accumulator--acc and an 8 bit adder 
 ||||
 | 00_1111_11_xxxx_xxxx | END |  |  |  
 
-**Note**: The INSTSEG and DATASEG is not invalid in this version. 
+**Note**
+(1) The INSTSEG and DATASEG is not invalid in this version. 
+(2) Instruction END must exists in the end of every program.
 
 ### Coordinator
 Carbon Core is a very simple CPU, to some extent you can consider it as an ALU with PC. So it need data RAM, instruction RAM, and a supplemental decoder. Therefore, Coordinator was created here. The figure below shows the interface of Coordinator crudely, the left interfaces connect with Carbon Core, while the right connect with Raspberry.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore003.png)
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore003.png)  
+
 Coordinator contains a 8 bit data RAM with 256 address space, and a 16 bit instruction RAM with 256 address space, both of these has its own RAM controller.  In addition, it has an supplemental decoder and a controller. What's more, it provide a clock generator that generates 4 clock with same frequency bu different phase, two of these are provided to Carbon Core, and the others are for decoder.  The figure below shown more detail about Coordinator.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore004.png)
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore004.png)  
 
 
 ## How to use test this system ?
 
+## Hardware 
+### FPGA
+My FPGA development borad has about 80 IO extension interface, with Xilinx spartan-6 FPGA chip. See my constrains file in *spartan6-fpga/myucf.ucf*, it can be a reference if you use different FPGA board.  
+
+### Raspberry
+What the host I used is Raspberry Pi Model B+ V1.2, this [link](http://pinout.xyz/) define the Raspberry Pinout. The table below shows how I define the Raspberry ports.
+
+| Port name | BCM | wiring Pi pin |
+| :--- | :--- | :--- |
+| IICING | BCM26 | 25 |
+| CACK | BCM19 | 24 |
+| RESET | BCM13 | 23 |
+| EN | BCM6 | 22 |
+| DSCL | BCM5 | 21 |
+| ISCL | BCM16 | 27 |
+| DSDA | BCM17 | 0 |
+| ISDA | BCM27 | 2 |
+
+After you loading the bit file to your FPGA and connecting the wires, you need to know how to compile your assembly program.
+
 ## Compiler
----
-Compiler is implemented by a python program named **compiler.py**  
+Compiler here is implemented by a python program named **compiler.py**  
 ### How to use Compiler.py
 The linux compiler command like the follow command: 
  
 > python ./compiler.py *resourcefilename* *[targetfilename]*  
 
-The command above will generate a target file named **a.out** by default. And the content of target file is consisted of binary data which present the compiled instructions.  
+For example, the **testbench03** is a assembly test program, let's compile it.  
+
+> python ./compiler.py testbench03 test03
+
+The command above will generate a target file named **a.out** by default. And the content of target file is consisted of binary data which present the compiled instructions. 
+
+## How to provide origin data ?
+You need to create a new file to provide your own data, but you need follow the predefine format. For example:
+```
+@0x00 01
+``` 
+The data immediately following **@** is the address you want to write, and the second data in the same line is data you want to provide. The address and dat can be represent with decimal or hexadecimal, but they should be in the range of 0~256.  
+
+See *raspberry-host/test03.dat*, it is an example data file.
 
 ## Main Controller  
----
 The file named **mainController.cpp** is the main file which include the entry function of the whole program.  
 
 ### How to compile the project
@@ -83,6 +117,6 @@ The command above will generate a exacutive file named **mainController**.
 ### How to run this program
 Following the command below:  
 
-> sudo ./mainController  
+> sudo ./mainController > run.log
 
-Because of the GPIO initialization operation, you need a root privilege to run this program correctly.
+Because of the GPIO initialization operation, you need a root privilege to run this program correctly. The run log information are written in **run.log**.
