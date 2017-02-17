@@ -28,6 +28,7 @@ module CarbonCore(
 	
 	assign PC_O = pc_out;
 	assign acc_zero = (acc_out == 8'b0);
+	assign acc_sign = acc_out[7];
 	assign DO = X_out;
 	
 	LATCH #(.width(1)) acc_update_reg(.clk(clkA), 
@@ -54,7 +55,8 @@ module CarbonCore(
 				.CI(CI), 
 				.acc_update(acc_update), 
 				.br_taken(br_taken), 
-				.acc_zero(acc_zero));
+				.acc_zero(acc_zero),
+				.acc_sign(acc_sign));
 				
 	PC pc(.clk(clkB), 
 		  .br_taken(br_taken_r), 
