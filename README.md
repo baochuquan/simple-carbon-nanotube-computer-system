@@ -43,8 +43,8 @@ Carbon Core is a very simple CPU, it has an accumulator--acc and an 8 bit adder 
 ||||
 | 00_1011_00_xxxx_xxxx | JR C | DI = -- | DO: -- |
 | 00_1100_00_xxxx_xxxx | B C | DI = --(C) | DO: -- |
-| 00_1100_01_xxxx_xxxx | BZ C | DI = --(C) | DO: -- |
-| 00_1100_10_xxxx_xxxx | BNZ C | DI = --(C) | DO: -- |
+| 00_1100_10_xxxx_xxxx | BZ C | DI = --(C) | DO: -- |
+| 00_1100_01_xxxx_xxxx | BNeg C | DI = --(C) | DO: -- |
 ||||
 | 00_1111_11_xxxx_xxxx | END |  |  |  
 

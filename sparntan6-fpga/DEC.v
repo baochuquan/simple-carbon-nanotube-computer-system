@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `include "signal.vh"
 
-module DEC(OP, sel_A, sel_B, CI, acc_update, br_taken, acc_zero);
+module DEC(OP, sel_A, sel_B, CI, acc_update, br_taken, acc_zero, acc_sign);
 	input [5:0] OP;
 	
 	output [1:0] sel_A;
@@ -30,6 +30,7 @@ module DEC(OP, sel_A, sel_B, CI, acc_update, br_taken, acc_zero);
 	output br_taken;
 	
 	input acc_zero;
+	input acc_sign;
 	
 	/*
 	sel_A							sel_B
@@ -69,7 +70,7 @@ module DEC(OP, sel_A, sel_B, CI, acc_update, br_taken, acc_zero);
 			6'b101100: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_acc,  `sel_B_zero, 1'b0, 1'b0, 1'b1};	
 			6'b110000: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_pc,   `sel_B_C,    1'b0, 1'b0, 1'b1};	
 			6'b110010: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_pc,   `sel_B_C,    1'b0, 1'b0, acc_zero};	
-			6'b110001: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_pc,   `sel_B_C,    1'b0, 1'b0, ~acc_zero};
+			6'b110001: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_pc,   `sel_B_C,    1'b0, 1'b0, acc_sign}; //branch when acc is negative
 			6'b111111: {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_x,    `sel_B_x,    1'b0, 1'b0, 1'b0};
 			default:   {reg_sel_A,reg_sel_B,reg_CI,reg_acc_update,reg_br_taken}={`sel_A_x,    `sel_B_x,    1'b0, 1'b0, 1'b0};	
 		endcase
