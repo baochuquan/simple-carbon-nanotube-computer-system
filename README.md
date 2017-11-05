@@ -1,127 +1,104 @@
-# Carbon Core Computer System
----
-Author: Chuquan Bao  
-Mail: baochuquan@163.com  
-Site: [chuquan.me](http://chuquan.me)  
-Date  : 2016-10-14  
+这是我研究生期间做的一个项目——碳纳米管计算机。然而此项目暂时告一段落，后续的研究将不再以此为基础，但具有一定的参考价值。
 
-## What is Carbon Core Computer System ?
-In 2013, the first carbon nanotube computer was born in Stanford which was composed of 178 CNTFETs(carbon nanotube field-effect-transistors). It was a one-instruction-set computer, implementing the SUBNEG(subtract and branch if negative). This CNTFET computer was a experimental works that it could only do 1 bit operations. It has neither monitor nor keyboard.   
-The target of this project is to implement a complete computer system that user can run some task programmed by them self, in which, the CPU is implemented with carbon nanotube.  
+# 项目背景
+2013年，斯坦福大学研制出了世界上第一个碳纳米管计算机系统，该系统由178个碳纳米管晶体管（CNTFET，Carbon-nontube Field-effect-transistor）组成。这一个只包含一条```SUBNEG```指令（subtract and branch if negative）的单指令计算机系统。这个CNTFET计算机是一个试验性的成果，只能执行1位的操作。当然，也不存在显示器和键盘。
 
-### Frame Work
-This computer system was composed of 3 parts: Carbon Core, Coordinator, Raspberry. As shown in the figure below.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png)
+在摩尔定律即将失效的今天，基于硅的集成电路几乎已经到达其工艺的极限，此时集成电路产业迫切需要一种新型材料来打破产业的瓶颈。这样一款碳纳米管计算机的出现时极具里程碑意义的。因此，该研究成果的相关论文也被Nature所收录。
 
-### Carbon Core(CPU)
-It is implemented with CNT actually, but it is implemented with FPGA in this repos.  
-The figure below shows the interface of Carbon Core.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore002.png)
+# 项目介绍
+项目目标：实现一个相对完整的计算机系统，用户可以在该系统上运行自己编写的程序。当然，系统所使用的CPU则是使用碳纳米管的相关工艺制造而成的。
 
-Carbon Core is a very simple CPU, it has an accumulator--acc and an 8 bit adder as its ALU. We designed an 8 bit simple ISA for it, as shown in the table below:  
+该系统所使用的CPU的指令系统和微结构由我和一个博士师弟设计，由另一团队进行物理实现。此外，我负责设计并实现该计算机系统的完整结构，包括软硬件协同设计与实现。
 
-| Instruction Encoding | Instruction Format | Input | Output |
-| :--- | :--- | :--- | :--- |
-| 00_0000_00_xxxx_xxxx | MOV C | DI = C | DO: -- | 
-| 00_0000_01_xxxx_xxxx | MOV [C] | DI = DRAM[C] | DO: -- | 
-| 00_0001_01_xxxx_xxxx | MOVn [C] | DI = -- | DO: D_addr = C, DRAM[C] = DO, Write DRAM | 
-||||
-| 00_0010_00_xxxx_xxxx | ADD D | DI = C | DO: -- |
-| 00_0010_01_xxxx_xxxx | ADD [C] | DI = DRAM[C] | DO: -- |
-| 00_0011_01_xxxx_xxxx | ADDn [C] | DI = DRAM[C] | DO: D_addr = C, DRAM[C] = DO, Write DRAM |
-||||
-| 00_0100_00_xxxx_xxxx | SUB C | DI = C | DO: -- |
-| 00_0100_01_xxxx_xxxx | SUB [C] | DI = DRAM[C] | DO: -- |
-| 00_0101_01_xxxx_xxxx | SUBn [C] | DI = DRAM[C] | DO: D_addr = C, DRAM[C] = DO, Write DRAM |
-||||
-| 00_0110_00_xxxx_xxxx | RSB C | DI = C | DO: -- |
-| 00_0110_01_xxxx_xxxx | RSB [C] | DI = DRAM[C] | DO: -- |
-| 00_0111_01_xxxx_xxxx | RSBn [C] | DI = DRAM[C] | DO: D_addr = C, DRAM[C] = DO, Write DRAM |
-||||
-| 00_1010_00_xxxx_xxxx | DATASEG C | DI = -- | DO: -- , DATASEG = C|
-| 00_1010_01_xxxx_xxxx | INSTSEG C | DI = -- | DO: -- , INSTSEG = C|
-||||
-| 00_1011_00_xxxx_xxxx | JR C | DI = -- | DO: -- |
-| 00_1100_00_xxxx_xxxx | B C | DI = --(C) | DO: -- |
-| 00_1100_10_xxxx_xxxx | BZ C | DI = --(C) | DO: -- |
-| 00_1100_01_xxxx_xxxx | BNeg C | DI = --(C) | DO: -- |
-||||
-| 00_1111_11_xxxx_xxxx | END |  |  |  
+## 整体结构
+如下图所示，该系统主要由以下三部分组成：
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png?x-oss-process=image/resize,w_500)</div>
 
-**Note**
-(1) The INSTSEG and DATASEG is not invalid in this version. 
-(2) Instruction END must exists in the end of every program.
+整个系统由五大部分组成：
+- Carbon Core:采用碳纳米管实现的 CPU。
+- Coordinator:采用 FPGA 实现，其辅助 Carbon Core CPU 完成了指令和数
+据存储，产生所需时钟，并完成与输入输出控制 CPU 异步通信等功能。
+- External Controller:使用树莓派(Raspberry Pi)作为输入输出控制 CPU，
+其上运行 Linux 操作系统。
+- Monitor:显示器，用户获得系统信息的方式。
+- Keyboard:键盘，用户输入命令的方式。
+
+
+### Carbon Core
+
+**指令系统**  
+该系统的CPU以世界上第一个8位处理器Intel 8008的设计为参考，针对碳纳米管CPU制造技术特点进行了裁剪和优化。CPU的指令系统如下表所示：  
+|助记符|指令编码|指令描述|
+|:---|:---:|:---|
+|MOV C|0000 0000|acc = C|
+|MOV [C]|0000 0001|acc = DRAM[C]|
+|MOVn|0000 0101|DRAM[C = acc|
+|ADD C|0000 1000|acc = acc + C|
+|ADD [C]|0000 1001|acc = acc + DRAM[C]|
+|ADDn [C]|0000 1101|DRAM[C] = acc + DRAM[C]|
+|SUB C|0001 0000|acc = acc - C|
+|SUB [C]|0001 0001|acc = acc - DRAM[C]|
+|SUBn [C]|0001 0101|DRAM[C] = acc - DRAM[C]|
+|RSB C|0001 1000|acc = C - acc|
+|RSB [C]|0001 1001|acc = DRAM[C] - acc|
+|RSBn [C]|0001 1101|DRAM[C] = DRAM[C] - acc|
+|DATASEG C|0010 1000|DATASEG = C |
+|INSTSEG C|0010 1001|INSTSEG = C |
+|JR C|0010 1100|PC = acc, INSTSEG = C|
+|B C|0011 0000|PC = PC + C|
+|BZ C|0011 0001|如果acc = 0，PC = PC + C|
+|BNZ C|0011 0010|如果acc != 0，PC = PC + C|
+|END|0011 1111|停机操作|
+
+**微体系结构**  
+如下图所示为该CPU的为体系结构。其中包括算术逻辑单元ALU、指令译码器DEC、程序计数器PC、分支判断逻辑等。CPU由两个同频不同象的时钟控制运行。
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore005.png?x-oss-process=image/resize,w_500)</div>
 
 ### Coordinator
-Carbon Core is a very simple CPU, to some extent you can consider it as an ALU with PC. So it need data RAM, instruction RAM, and a supplemental decoder. Therefore, Coordinator was created here. The figure below shows the interface of Coordinator crudely, the left interfaces connect with Carbon Core, while the right connect with Raspberry.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore003.png)  
+光有CPU是无法运行程序的，因此，需要为其定制设计一个外围的辅助电路。如下图所示为辅助电路模块Coordinator的内部实现，主要包含了7大部件：  
+- Clock Generator：时钟发生器，时钟源来自FPGA时钟源，向Decoder和Carbon Core CPU提供时钟。
+- Decoder：辅助Carbon Core CPU进行译码、寻址、读写RAM。
+- Main Controller：传递外部控制器的控制信号，从而可能告知Decoder和Carbon Core CPU；此外，在捕获到END指令后会向外部控制器发送程序运行完毕信号。
+- IRAM Controller：控制Decoder对IRAM的读操作。
+- DRAM Controller：控制Decoder对DRAM的读写操作。
+- IRAM：一个包含256个双字节存储单元的RAM，用于存储指令，内部包含基于I2C的指令收发协议。
+- DRAM：一个包含256个单字节存储单元的RAM，用于存储数据，内部包含基于I2C的数据收发协议。
 
-Coordinator contains a 8 bit data RAM with 256 address space, and a 16 bit instruction RAM with 256 address space, both of these has its own RAM controller.  In addition, it has an supplemental decoder and a controller. What's more, it provide a clock generator that generates 4 clock with same frequency bu different phase, two of these are provided to Carbon Core, and the others are for decoder.  The figure below shown more detail about Coordinator.  
-![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore004.png)  
-
-
-## How to use test this system ?
-
-## Hardware 
-### FPGA
-My FPGA development borad has about 80 IO extension interface, with Xilinx spartan-6 FPGA chip. See my constrains file in *spartan6-fpga/myucf.ucf*, it can be a reference if you use different FPGA board.  
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore006.png?x-oss-process=image/resize,w_500)</div>
 
 ### Raspberry
-What the host I used is Raspberry Pi Model B+ V1.2, this [link](http://pinout.xyz/) define the Raspberry Pinout. The table below shows how I define the Raspberry ports.
+项目使用树莓派作为外部控制器，在树莓派上进行编程，目前只能进行汇编编程。当然，程序需要遵循Carbon Core CPU的指令系统。使用我们编写的一个简单的汇编器进行编译，通过控制程序即可让Carbon Core CPU执行你所编写的程序。
 
-| Port name | BCM | wiring Pi pin |
-| :--- | :--- | :--- |
-| IICING | BCM26 | 25 |
-| CACK | BCM19 | 24 |
-| RESET | BCM13 | 23 |
-| EN | BCM6 | 22 |
-| DSCL | BCM5 | 21 |
-| ISCL | BCM16 | 27 |
-| DSDA | BCM17 | 0 |
-| ISDA | BCM27 | 2 |
+```raspberry-host/mainController.cpp```文件包含整个系统软件控制程序的入口函数。
 
-After you loading the bit file to your FPGA and connecting the wires, you need to know how to compile your assembly program.
-
-## Compiler
-Compiler here is implemented by a python program named **compiler.py**  
-### How to use Compiler.py
-The linux compiler command like the follow command:   
-
-```bash 
-python ./compiler.py resourcefilename [targetfilename]  
-```
-
-For example, the **testbench03** is a assembly test program, let's compile it.  
+**编译**  
+直接运行```rasberry-host```目录下的```build.sh```脚本即可编译控制程序：  
 ```bash
-python ./compiler.py testbench03 test03
+$ ./build.sh
 ```
 
-The command above will generate a target file named **a.out** by default. And the content of target file is consisted of binary data which present the compiled instructions. 
+**运行**  
+如果想要运行整个系统，则需要搭建相关的电路系统，并使用FPGA实现```sparntan6-fpga```目录中的硬件设计。项目还提供了碳纳米管CPU的硬件设计，普通用户虽然无法使用碳纳米管来实现该CPU，但是可以使用FPGA来实现。当然，还需要树莓派、显示器、键盘才能让整个系统运行起来。
 
-## How to provide origin data ?
-You need to create a new file to provide your own data, but you need follow the predefine format. For example:
-```
-@0x00 01
-``` 
-The data immediately following **@** is the address you want to write, and the second data in the same line is data you want to provide. The address and dat can be represent with decimal or hexadecimal, but they should be in the range of 0~256.  
-
-See *raspberry-host/test03.dat*, it is an example data file.
-
-## Main Controller  
-The file named **mainController.cpp** is the main file which include the entry function of the whole program.  
-
-### How to compile the project
-The bash file named **build.sh** is the build bash script. Follow the command below to build this project:  
+当系统搭建完毕之后，即可运行以下命令：  
 ```bash
-./build.sh  
+$ sudo ./mainController > run.log
 ```
 
-The command above will generate a exacutive file named **mainController**.  
+由于系统的运行涉及到树莓派GPIO的初始化做操，因此需要root权限才能正确运行该系统。另外，运行生成的```run.log```文件记录系统执行程序时的相关信息。
 
-### How to run this program
-Following the command below:  
-```bash
-sudo ./mainController > run.log
-```
+## 其他补充
+### 电平转换
+由于Carbon Core的工作电压是2V，而我们的树莓派、FPGA的工作电压均为5V，所以在协同工作时需要加入电平转换模块。如下图所示，便是我们设计的电平转换电路。
 
-Because of the GPIO initialization operation, you need a root privilege to run this program correctly. The run log information are written in **run.log**.
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore009.png?x-oss-process=image/resize,w_500)</div>
+
+### 系统展示
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore007.png?x-oss-process=image/resize,w_500)</div>
+
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore008.png?x-oss-process=image/resize,w_500)</div>
+
+### 碳纳米管CPU
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore010.png?x-oss-process=image/resize,w_500)</div>
+
+<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore011.png?x-oss-process=image/resize,w_500)</div>
