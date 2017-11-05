@@ -11,7 +11,8 @@
 该系统所使用的CPU的指令系统和微结构由我和一个博士师弟设计，由另一团队进行物理实现。此外，我负责设计并实现该计算机系统的完整结构，包括软硬件协同设计与实现。
 
 ## 整体结构
-如下图所示，该系统主要由以下三部分组成：
+如下图所示，该系统主要由以下三部分组成：  
+
 ![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png?x-oss-process=image/resize,w_500)
 
 整个系统由五大部分组成：
@@ -52,7 +53,8 @@
 |END|0011 1111|停机操作|
 
 **微体系结构**  
-如下图所示为该CPU的为体系结构。其中包括算术逻辑单元ALU、指令译码器DEC、程序计数器PC、分支判断逻辑等。CPU由两个同频不同象的时钟控制运行。
+如下图所示为该CPU的为体系结构。其中包括算术逻辑单元ALU、指令译码器DEC、程序计数器PC、分支判断逻辑等。CPU由两个同频不同象的时钟控制运行。  
+
 ![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore005.png?x-oss-process=image/resize,w_500)
 
 ### Coordinator
