@@ -12,7 +12,7 @@
 
 ## 整体结构
 如下图所示，该系统主要由以下三部分组成：
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/github-images/carboncore001.png?x-oss-process=image/resize,w_500)
 
 整个系统由五大部分组成：
 - Carbon Core:采用碳纳米管实现的 CPU。
@@ -28,6 +28,7 @@
 
 **指令系统**  
 该系统的CPU以世界上第一个8位处理器Intel 8008的设计为参考，针对碳纳米管CPU制造技术特点进行了裁剪和优化。CPU的指令系统如下表所示：  
+
 |助记符|指令编码|指令描述|
 |:---|:---:|:---|
 |MOV C|0000 0000|acc = C|
@@ -52,7 +53,7 @@
 
 **微体系结构**  
 如下图所示为该CPU的为体系结构。其中包括算术逻辑单元ALU、指令译码器DEC、程序计数器PC、分支判断逻辑等。CPU由两个同频不同象的时钟控制运行。
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore005.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore005.png?x-oss-process=image/resize,w_500)
 
 ### Coordinator
 光有CPU是无法运行程序的，因此，需要为其定制设计一个外围的辅助电路。如下图所示为辅助电路模块Coordinator的内部实现，主要包含了7大部件：  
@@ -64,7 +65,7 @@
 - IRAM：一个包含256个双字节存储单元的RAM，用于存储指令，内部包含基于I2C的指令收发协议。
 - DRAM：一个包含256个单字节存储单元的RAM，用于存储数据，内部包含基于I2C的数据收发协议。
 
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore006.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore006.png?x-oss-process=image/resize,w_500)
 
 ### Raspberry
 项目使用树莓派作为外部控制器，在树莓派上进行编程，目前只能进行汇编编程。当然，程序需要遵循Carbon Core CPU的指令系统。使用我们编写的一个简单的汇编器进行编译，通过控制程序即可让Carbon Core CPU执行你所编写的程序。
@@ -91,14 +92,14 @@ $ sudo ./mainController > run.log
 ### 电平转换
 由于Carbon Core的工作电压是2V，而我们的树莓派、FPGA的工作电压均为5V，所以在协同工作时需要加入电平转换模块。如下图所示，便是我们设计的电平转换电路。
 
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore009.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore009.png?x-oss-process=image/resize,w_500)
 
 ### 系统展示
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore007.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore007.png?x-oss-process=image/resize,w_500)
 
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore008.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore008.png?x-oss-process=image/resize,w_500)
 
 ### 碳纳米管CPU
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore010.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore010.png?x-oss-process=image/resize,w_500)
 
-<div center=align>![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore011.png?x-oss-process=image/resize,w_500)</div>
+![](http://chuquan-public-r-001.oss-cn-shanghai.aliyuncs.com/blog-images/carboncore011.png?x-oss-process=image/resize,w_500)
